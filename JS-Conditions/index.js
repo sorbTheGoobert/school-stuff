@@ -176,3 +176,57 @@ answer6 = document.createElement("p");
 answer6.innerHTML = `6. ${sum}`
 document.body.appendChild(answer6);
 // 7
+console.log("7.");
+let answer7;
+var team1 = [1, 0, 2], team2 = [1, 1, 1];
+function findAvarage(array) {
+    val = 0;
+    for (var i = 0; i < array.length; i++) {
+        val += array[i];
+    }
+    val /= array.length;
+    return val;
+}
+if (findAvarage(team1) < 100 && findAvarage(team2) < 100) sum = 'nobody';
+else if (findAvarage(team1) > findAvarage(team2)) sum = 'team1';
+else if (findAvarage(team1) < findAvarage(team2)) sum = 'team2';
+else if (findAvarage(team1) == findAvarage(team2)) sum = 'equal';
+console.log(sum);
+answer7 = document.createElement("p");
+answer7.innerHTML = `7. ${sum}`
+document.body.appendChild(answer7);
+// 8
+console.log("8.");
+let answer8;
+var crewStatus = prompt("Ready? True or False");
+var computerStatusCode = prompt("Computer status code?");
+var shuttleSpeed = prompt("Shuttle speed?");
+sum = "";
+if(crewStatus) sum+="Crew ready ";
+else sum+="Crew not ready ";
+
+if (computerStatusCode == 200) sum +="Please stand by. Computer is rebooting. ";
+else if (computerStatusCode == 400) sum += "Success! Computer online. ";
+else sum +="ALERT: Computer offline! ";
+
+if (shuttleSpeed > 17500) sum += "ALERT: Escape velocity reached!";
+else if (shuttleSpeed < 8000) sum += "ALERT: Cannot maintain orbit!";
+else sum += "Stable speed";
+console.log(sum);
+answer8 = document.createElement("p");
+answer8.innerHTML = `8. ${sum}`
+document.body.appendChild(answer8);
+
+// 9
+console.log("9.");
+let answer9;
+var a = prompt("a = ?"), b = prompt("b = ?"), c = prompt("c = ?");
+if(a*b*c < 0) sum = "-";
+if(a*b*c > 0) sum = "+";
+if(a*b*c == 0) sum = "0";
+console.log(sum);
+answer9 = document.createElement("p");
+answer9.innerHTML = `9. The sign is ${sum}`
+document.body.appendChild(answer9);
+
+//done.
