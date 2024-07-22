@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello world!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-size: 128px;
+        }
+        body {
+            margin: 0;
+            height: 100vh;
+            background-color: black;
+            display: flex;
+            align-items: center;
+        }
+        #paragraph {
+            width: 100%;
+            text-align: center;
+            color: white;
+            font-weight: 900;
+            font-family: "Bitter";
+        }
+        .transition {
+            transition: all .1s;
+        }
+    </style>
+</head>
+<body onkeypress="input(event)">
+    <p id="paragraph" class="transition"></p>
+    <script src="./index.js"></script>
+</body>
+</html>
