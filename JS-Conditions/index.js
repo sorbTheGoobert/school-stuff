@@ -39,194 +39,194 @@
 // Sample numbers : 3, -7, 2
 // Output : The sign is -
 
-// 1
-console.log("1.");
-var a = 85, b = 75, c = 96, d = 69, sum = 0;
-if(a > 80) sum += a;
-if(b > 80) sum += b;
-if(c > 80) sum += c;
-if(d > 80) sum += d;
-console.log(sum);
-answer1 = document.createElement("p");
-answer1.innerHTML = `1. ${sum}`
-document.body.appendChild(answer1);
-// 2
-console.log("2.");
-a = 3; b = 7; c = 2; d = 4; sum = 1;
-if (a < 5) sum *= a;
-if (b < 5) sum *= b;
-if (c < 5) sum *= c;
-if (d < 5) sum *= d;
-console.log(sum);
-answer2 = document.createElement("p");
-answer2.innerHTML = `2. ${sum}`
-document.body.appendChild(answer2);
-// 3
-console.log("3.");
-let answer3;
-var myAge = 14; yourAge = undefined; gotAge = false;
-yourAge = prompt("Насаа оруулна уу:");
-if (myAge < yourAge) sum = "Та хөгшин";
-else if (myAge > yourAge) sum = "Би хөгшин";
-else sum = "Адил настай";
-console.log(sum);
-answer3 = document.createElement("p");
-answer3.innerHTML = `3. ${sum}`
-document.body.appendChild(answer3);
-// 4
-console.log("4.");
-let answer4;
-var day;
-day = prompt("gib day");
-switch(day) {
-    case "1":
-        console.log("ajil");
-        sum = "ajil";
-        break;
-    case "Monday":
-        console.log("ajil");
-        sum = "ajil";
-        break;
-    case "2":
-        console.log("ajil");
-        sum = "ajil";
-        break;
-    case "Tuesday":
-        console.log("ajil");
-        sum = "ajil";
-        break;
-    case "3":
-        console.log("ajil");
-        sum = "ajil";
-        break;
-    case "Wednesday":
-        console.log("ajil");
-        sum = "ajil";
-        break;
-    case "4":
-        console.log("ajil");
-        sum = "ajil";
-        break;
-    case "Thursday":
-        console.log("ajil");
-        sum = "ajil";
-        break;
-    case "5":
-        console.log("ajil");
-        sum = "ajil";
-        break;
-    case "Friday":
-        console.log("ajil");
-        sum = "ajil";
-        break;
-    case "6":
-        console.log("amralt");
-        sum = "amralt";
-        break;
-    case "Saturday":
-        console.log("amralt");
-        sum = "amralt";
-        break;
-    case "7":
-        console.log("amralt");
-        sum = "amralt";
-        break;
-    case "Sunday":
-        console.log("amralt");
-        sum = "amralt";
-        break;
-}
-answer4 = document.createElement("p");
-answer4.innerHTML = `4. ${sum}`
-document.body.appendChild(answer4);
-//5
-console.log("5.");
-let answer5;
-var year = prompt("gib year");
-if (year % 400 == 0) sum = "ondor jil";
-else if (year % 100 == 0) sum = "ondor jil bish";
-else if (year % 4 == 0) sum = "ondor jil";
-console.log(sum);
-answer5 = document.createElement("p");
-answer5.innerHTML = `5. ${sum}`
-document.body.appendChild(answer5);
-// 6
-console.log("6.");
-let answer6;
-var bat = {
-    score: 67,
-    name: "bat",
-}
-var bold = {
-    score: 59,
-    name: "bold",
-}
-function pointCheck(child, score) {
-    var grade;
-    if (score < 60) grade = "Маш муу";
-    else if (score < 70) grade = "Хангалттай";
-    else if (score < 80) grade = "Дунд";
-    else if (score < 90) grade = "Сайн";
-    else grade = "Маш сайн";
-    return child + ` - ${score}% - ` + grade;
-}
-sum = pointCheck(bat.name, bat.score) + " " + pointCheck(bold.name, bold.score);
-console.log(sum);
-answer6 = document.createElement("p");
-answer6.innerHTML = `6. ${sum}`
-document.body.appendChild(answer6);
-// 7
-console.log("7.");
-let answer7;
-var team1 = [1, 0, 2], team2 = [1, 1, 1];
-function findAvarage(array) {
-    val = 0;
-    for (var i = 0; i < array.length; i++) {
-        val += array[i];
-    }
-    val /= array.length;
-    return val;
-}
-if (findAvarage(team1) < 100 && findAvarage(team2) < 100) sum = 'nobody';
-else if (findAvarage(team1) > findAvarage(team2)) sum = 'team1';
-else if (findAvarage(team1) < findAvarage(team2)) sum = 'team2';
-else if (findAvarage(team1) == findAvarage(team2)) sum = 'equal';
-console.log(sum);
-answer7 = document.createElement("p");
-answer7.innerHTML = `7. ${sum}`
-document.body.appendChild(answer7);
-// 8
-console.log("8.");
-let answer8;
-var crewStatus = prompt("Ready? True or False");
-var computerStatusCode = prompt("Computer status code?");
-var shuttleSpeed = prompt("Shuttle speed?");
-sum = "";
-if(crewStatus) sum+="Crew ready ";
-else sum+="Crew not ready ";
+// // 1
+// console.log("1.");
+// var a = 85, b = 75, c = 96, d = 69, sum = 0;
+// if(a > 80) sum += a;
+// if(b > 80) sum += b;
+// if(c > 80) sum += c;
+// if(d > 80) sum += d;
+// console.log(sum);
+// answer1 = document.createElement("p");
+// answer1.innerHTML = `1. ${sum}`
+// document.body.appendChild(answer1);
+// // 2
+// console.log("2.");
+// a = 3; b = 7; c = 2; d = 4; sum = 1;
+// if (a < 5) sum *= a;
+// if (b < 5) sum *= b;
+// if (c < 5) sum *= c;
+// if (d < 5) sum *= d;
+// console.log(sum);
+// answer2 = document.createElement("p");
+// answer2.innerHTML = `2. ${sum}`
+// document.body.appendChild(answer2);
+// // 3
+// console.log("3.");
+// let answer3;
+// var myAge = 14; yourAge = undefined; gotAge = false;
+// yourAge = prompt("Насаа оруулна уу:");
+// if (myAge < yourAge) sum = "Та хөгшин";
+// else if (myAge > yourAge) sum = "Би хөгшин";
+// else sum = "Адил настай";
+// console.log(sum);
+// answer3 = document.createElement("p");
+// answer3.innerHTML = `3. ${sum}`
+// document.body.appendChild(answer3);
+// // 4
+// console.log("4.");
+// let answer4;
+// var day;
+// day = prompt("gib day");
+// switch(day) {
+//     case "1":
+//         console.log("ajil");
+//         sum = "ajil";
+//         break;
+//     case "Monday":
+//         console.log("ajil");
+//         sum = "ajil";
+//         break;
+//     case "2":
+//         console.log("ajil");
+//         sum = "ajil";
+//         break;
+//     case "Tuesday":
+//         console.log("ajil");
+//         sum = "ajil";
+//         break;
+//     case "3":
+//         console.log("ajil");
+//         sum = "ajil";
+//         break;
+//     case "Wednesday":
+//         console.log("ajil");
+//         sum = "ajil";
+//         break;
+//     case "4":
+//         console.log("ajil");
+//         sum = "ajil";
+//         break;
+//     case "Thursday":
+//         console.log("ajil");
+//         sum = "ajil";
+//         break;
+//     case "5":
+//         console.log("ajil");
+//         sum = "ajil";
+//         break;
+//     case "Friday":
+//         console.log("ajil");
+//         sum = "ajil";
+//         break;
+//     case "6":
+//         console.log("amralt");
+//         sum = "amralt";
+//         break;
+//     case "Saturday":
+//         console.log("amralt");
+//         sum = "amralt";
+//         break;
+//     case "7":
+//         console.log("amralt");
+//         sum = "amralt";
+//         break;
+//     case "Sunday":
+//         console.log("amralt");
+//         sum = "amralt";
+//         break;
+// }
+// answer4 = document.createElement("p");
+// answer4.innerHTML = `4. ${sum}`
+// document.body.appendChild(answer4);
+// //5
+// console.log("5.");
+// let answer5;
+// var year = prompt("gib year");
+// if (year % 400 == 0) sum = "ondor jil";
+// else if (year % 100 == 0) sum = "ondor jil bish";
+// else if (year % 4 == 0) sum = "ondor jil";
+// console.log(sum);
+// answer5 = document.createElement("p");
+// answer5.innerHTML = `5. ${sum}`
+// document.body.appendChild(answer5);
+// // 6
+// console.log("6.");
+// let answer6;
+// var bat = {
+//     score: 67,
+//     name: "bat",
+// }
+// var bold = {
+//     score: 59,
+//     name: "bold",
+// }
+// function pointCheck(child, score) {
+//     var grade;
+//     if (score < 60) grade = "Маш муу";
+//     else if (score < 70) grade = "Хангалттай";
+//     else if (score < 80) grade = "Дунд";
+//     else if (score < 90) grade = "Сайн";
+//     else grade = "Маш сайн";
+//     return child + ` - ${score}% - ` + grade;
+// }
+// sum = pointCheck(bat.name, bat.score) + " " + pointCheck(bold.name, bold.score);
+// console.log(sum);
+// answer6 = document.createElement("p");
+// answer6.innerHTML = `6. ${sum}`
+// document.body.appendChild(answer6);
+// // 7
+// console.log("7.");
+// let answer7;
+// var team1 = [1, 0, 2], team2 = [1, 1, 1];
+// function findAvarage(array) {
+//     val = 0;
+//     for (var i = 0; i < array.length; i++) {
+//         val += array[i];
+//     }
+//     val /= array.length;
+//     return val;
+// }
+// if (findAvarage(team1) < 100 && findAvarage(team2) < 100) sum = 'nobody';
+// else if (findAvarage(team1) > findAvarage(team2)) sum = 'team1';
+// else if (findAvarage(team1) < findAvarage(team2)) sum = 'team2';
+// else if (findAvarage(team1) == findAvarage(team2)) sum = 'equal';
+// console.log(sum);
+// answer7 = document.createElement("p");
+// answer7.innerHTML = `7. ${sum}`
+// document.body.appendChild(answer7);
+// // 8
+// console.log("8.");
+// let answer8;
+// var crewStatus = prompt("Ready? True or False");
+// var computerStatusCode = prompt("Computer status code?");
+// var shuttleSpeed = prompt("Shuttle speed?");
+// sum = "";
+// if(crewStatus) sum+="Crew ready ";
+// else sum+="Crew not ready ";
 
-if (computerStatusCode == 200) sum +="Please stand by. Computer is rebooting. ";
-else if (computerStatusCode == 400) sum += "Success! Computer online. ";
-else sum +="ALERT: Computer offline! ";
+// if (computerStatusCode == 200) sum +="Please stand by. Computer is rebooting. ";
+// else if (computerStatusCode == 400) sum += "Success! Computer online. ";
+// else sum +="ALERT: Computer offline! ";
 
-if (shuttleSpeed > 17500) sum += "ALERT: Escape velocity reached!";
-else if (shuttleSpeed < 8000) sum += "ALERT: Cannot maintain orbit!";
-else sum += "Stable speed";
-console.log(sum);
-answer8 = document.createElement("p");
-answer8.innerHTML = `8. ${sum}`
-document.body.appendChild(answer8);
+// if (shuttleSpeed > 17500) sum += "ALERT: Escape velocity reached!";
+// else if (shuttleSpeed < 8000) sum += "ALERT: Cannot maintain orbit!";
+// else sum += "Stable speed";
+// console.log(sum);
+// answer8 = document.createElement("p");
+// answer8.innerHTML = `8. ${sum}`
+// document.body.appendChild(answer8);
 
-// 9
-console.log("9.");
-let answer9;
-var a = prompt("a = ?"), b = prompt("b = ?"), c = prompt("c = ?");
-if(a*b*c < 0) sum = "-";
-if(a*b*c > 0) sum = "+";
-if(a*b*c == 0) sum = "0";
-console.log(sum);
-answer9 = document.createElement("p");
-answer9.innerHTML = `9. The sign is ${sum}`
-document.body.appendChild(answer9);
+// // 9
+// console.log("9.");
+// let answer9;
+// var a = prompt("a = ?"), b = prompt("b = ?"), c = prompt("c = ?");
+// if(a*b*c < 0) sum = "-";
+// if(a*b*c > 0) sum = "+";
+// if(a*b*c == 0) sum = "0";
+// console.log(sum);
+// answer9 = document.createElement("p");
+// answer9.innerHTML = `9. The sign is ${sum}`
+// document.body.appendChild(answer9);
 
 //done.
