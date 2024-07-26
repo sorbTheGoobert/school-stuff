@@ -80,13 +80,13 @@ function numToStr(number) {
 function FizzBuzz(number) {
     if (number % 3 == 0 && number % 5 == 0) {
         return "FizzBuzz";
-    }else if (number % 3 == 0) {
+    } else if (number % 3 == 0) {
         return "Fizz";
-    }else if (number % 5 == 0) {
+    } else if (number % 5 == 0) {
         return "Buzz";
-    }else if(number % 3 != 0 && number % 5 != 0 && typeof(number) == "number"){
+    } else if (number % 3 != 0 && number % 5 != 0 && typeof (number) == "number") {
         return "give me something that is worthy";
-    }else if(typeof(number) != "number"){
+    } else if (typeof (number) != "number") {
         return "Nan - Not a Number! Please Input Number";
     }
 }
@@ -105,8 +105,8 @@ function FizzBuzz(number) {
 
 function factorial(n) {
     let val = 1;
-    for(i = 1; i <= n; i++){
-        val*=i;
+    for (i = 1; i <= n; i++) {
+        val *= i;
     }
     return val;
 }
@@ -122,9 +122,9 @@ function factorial(n) {
 // > "Odd"
 
 function oddOrEven(number) {
-    if(number % 2){
+    if (number % 2) {
         return "Odd";
-    }else{
+    } else {
         return "Even";
     }
 }
@@ -143,9 +143,9 @@ function oddOrEven(number) {
 
 function addUp(number) {
     let sum = 0;
-    for(i = number; i >= 0; i--) {
-        sum+=i;
-    }    
+    for (i = number; i >= 0; i--) {
+        sum += i;
+    }
     return sum;
 }
 
@@ -158,9 +158,9 @@ function addUp(number) {
 // isEmpty(“Chaima”)➞ false
 
 function isEmpty(string) {
-    if(!string){
+    if (!string) {
         return true;
-    }else{
+    } else {
         return false;
     }
 }
@@ -176,12 +176,29 @@ function isEmpty(string) {
 // isEqualStr (“ Simplon”,”tunis ”)➞ false
 // isEqualStr (“CA”,”FS”)➞ true
 
+function isEqualStr(str1, str2) {
+    if (str1.length == str2.length) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// console.log(isEqualStr("Hi", "Bye"));
+
 // Exercise 7
 
 // Create a function that takes two numbers, a and b, return true if a can be divided evenly by b , return false otherwise.
 // oneDevideByTwo(9,3)➞true
 // oneDevideByTwo(10,2)➞true
 // oneDevideByTwo(13,2)➞false
+
+function oneDevideByTwo(a, b) {
+    if (a % b) return false;
+    else return true;
+}
+
+// console.log(oneDevideByTwo(9, 4));
 
 // Exercise 8
 
@@ -190,11 +207,31 @@ function isEmpty(string) {
 // moodToday("happy") ➞ "Today, I am feeling happy"
 // moodToday( ) ➞ "Today, I am feeling neuter"
 
+function feeling(mood) {
+    if (mood == "") {
+        return "Today, I am feeling neuter";
+    } else {
+        return `Today I am feeling ${mood}`;
+    }
+}
+
+// console.log(feeling());
+
 // Exercise 9
 
 // Write a function that validates whether two strings are identical. Make it case insensitive.
 // match(“HELLO WORLD”) and (”hello world”) → true
 // match("mask", "mAskinG") ➞ false
+
+function match(str1, str2) {
+    if (str1.toLowerCase() == str2.toLowerCase()) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// console.log(match("ULTRAKILL", "megadeath"));
 
 // Exercise 10
 
@@ -202,11 +239,43 @@ function isEmpty(string) {
 // getCase("javascript..") ➞ "lower"
 // getCase("SHOUT!") ➞ "upper"
 
+function getCase(string) {
+    if (string.toLowerCase() == string) {
+        return "lower";
+    } else if (string.toUpperCase() == string) {
+        return "UPPER";
+    } else {
+        return "mixed";
+    }
+}
+
+// console.log(getCase("HIIIII"));
+
 // Exercise 11
 
 // Create a function that takes  a string as argument (of a person’s first and last name) and returns a string with the first and last name swapped.
 // swapName("Ada Lovelace") ➞ "Lovelace Ada"
 // swapName(“Alan Turing”)➞  “Turing Alan”
+
+function swapName(name) {
+    let firstName = "";
+    let lastName = "";
+    let i = 0;
+    for (i = 0; i < name.length; i++) {
+        if (name[i] != " ") {
+            firstName += name[i];
+        } else {
+            i++;
+            while (i < name.length) {
+                lastName += name[i];
+                i++;
+            }
+        }
+    }
+    return lastName + " " + firstName;
+}
+
+// console.log(swapName("Big Johninator"));
 
 // Exercise 12
 
@@ -214,9 +283,77 @@ function isEmpty(string) {
 // AlphabetSoup("javascript") ➞ "aacijprstv"
 // AlphabetSoup(“simplon”) ➞”ilmnops”
 
+function AlphabetSoup(string) {
+    let arr = [];
+    for (i = 0; i < string.length; i++) {
+        arr[i] = string.charCodeAt(i);
+    }
+    quickSort(arr, 0, arr.length - 1);
+    string = "";
+    for (i = 0; i < arr.length; i++) {
+        string += String.fromCharCode(arr[i]);
+    }
+    return string;
+}
+
+// i wanna implement quick sort.
+
+function quickSort(array, start, end) {
+    if (end <= start) {
+        return 0;
+    }
+    let pivot = partition(array, start, end);
+    quickSort(array, start, pivot - 1);
+    quickSort(array, pivot + 1, end);
+}
+function partition(array, start, end) {
+    let pivot = array[end];
+    let i = start - 1;
+    for (let j = start; j <= end - 1; j++) {
+        if (array[j] < pivot) {
+            i++;
+            let temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+    }
+    i++;
+    let temp = array[i];
+    array[i] = array[end];
+    array[end] = temp;
+    return i;
+}
+
+// console.log(AlphabetSoup("241fdgasf322"));
+
+//but i couldve just done this
+
+function AlphabetSoupButBetter(string) {
+    let arr = [];
+    for (i = 0; i < string.length; i++) {
+        arr[i] = string[i];
+    }
+    arr.sort();
+    string = "";
+    for (i = 0; i < arr.length; i++) {
+        string += arr[i];
+    }
+    return string;
+}
+
+// console.log(AlphabetSoupButBetter("241fdgasf322"));
+
 // Exercise 13
 
 // Create a function that takes a number as argument and returns the incrementing (+1) for each odd number and decrementing (-1) for each even number.
 // incrementOrDecrement(5) ➞4
 // incrementOrDecrement(2) ➞3
 
+// ??????? wdym?????
+
+// function incrementOrDecrement(x) {
+//     let odd = 0;
+//     let even = 0;
+//     let leftOver;
+//     leftOver = 
+// }
