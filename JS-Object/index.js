@@ -68,21 +68,55 @@ delete book.year;
 
 console.log(book);
 
-// 5. Create an object called movie with properties title, director, and year.
 // Log all the keys and values of the movie object to the console.
 
 const movie = {
     title: "the boom guy: boomer",
     director: "oppenhiemer",
+    year: "241 BC",
 }
+
+console.log(movie);
 
 // 6. Create two objects representing two people's details.
 // Merge them into a single object.
 // Log the merged object.
 
+let person1 = {
+    name: "Joe",
+    // age: 32,
+    gender: "HELL YEAH🦅🦅🦅🦅",
+}
+let person2 = {
+    name: "mama",
+    age: 1850,
+    // gender: "HELL NAW🇬🇧🇬🇧🇬🇧🇬🇧",
+}
+
+console.log({...person1, ...person2});
+
 // 7. Create an object data with properties firstName, lastName, and age.
 // Rename the firstName property to name.
 // Log the updated data object.
 
+let obj = {
+    firsName: "6",
+    lastName: "6",
+    age: 6,
+}
+
+obj.name = obj.firsName;
+delete obj.firsName;
+
+console.log(obj);
+
 // 8. Create an object userProfile with properties username, email, and age.
 // Write code to check if email exists and log it; if it doesn't, assign a default value and log the updated object.
+
+let userProfile = {
+    username: "X*X_GameGod21_X*X",
+    email: "gamergod21@yahoo.com",
+    age: 21
+}
+
+// eh whatever
